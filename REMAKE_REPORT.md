@@ -122,6 +122,7 @@ Tested against the production build (`npm run build`, `npm run preview`) in head
 | Sign in / sign up | Tab switches; the name field appears |
 | French | `lang="fr-CA"`; title and hero translate; `__i18nMissing` contains only names, addresses and already-French strings |
 | Copy audit | No reference headline or service name found in the HTML or scripts |
+| Repository audit | `npm run audit` passes all link, picture, report and hotlink checks |
 | Asset audit | No `oboosho.com` or `assets.awwwards.com` references in the site |
 
 Screenshots of the finished pages are in [`docs/screens/`](./docs/screens/): nine desktop pages

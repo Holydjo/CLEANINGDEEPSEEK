@@ -16,6 +16,7 @@ npm run dev
 ```
 
 `npm run build` writes a static site to `dist/`. `npm run preview` serves that build.
+`npm run audit` checks the report status, local links, picture files and reference hotlinks.
 
 ## What is here
 
