@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FAQ — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Frequently asked questions about HOLYDJO-CLEAN home cleaning." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="faq">
+    <main>
+      <section class="page-hero">
+        <div class="circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+        <div class="wrap">
+          <div class="subttl">FAQ</div>
+          <h1>Questions, answered.</h1>
+          <p class="lead">Short answers to what people ask most. If yours is missing, get in touch.</p>
+        </div>
+        <div class="page-illus"></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="faq-list" data-render="faq"></div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="contact-card anim-block" style="text-align: center; padding: 60px 30px">
+            <h2 class="main">Still curious?</h2>
+            <p style="max-width: 50ch; margin: 0 auto 24px">Not on the list? Call <a href="tel:+14165550142"><b>(416) 555-0142</b></a> or write to <a href="mailto:hello@example.com"><b>hello@example.com</b></a> and a person will answer.</p>
+            <a href="mailto:hello@example.com" class="btn"><span>Write E-Mail</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/pages/inner.js"></script>
+  </body>
+</html>

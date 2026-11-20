@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Careers — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Clean with us at HOLYDJO-CLEAN. Competitive salary, benefits, paid travel time." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="careers">
+    <main>
+      <section class="page-hero">
+        <div class="circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+        <div class="wrap">
+          <div class="subttl">Careers</div>
+          <h1>Clean with us.</h1>
+          <p class="lead">We employ our team, we do not outsource it. Good pay, real benefits, and a schedule you control.</p>
+        </div>
+        <div class="page-illus"></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="contact-grid">
+            <div>
+              <div class="anim-block" style="margin-bottom: 30px">
+                <div class="subttl">Our promise</div>
+                <h2 class="main">We offer</h2>
+              </div>
+              <ul class="perks" data-render="perks"></ul>
+              <div class="anim-block" style="margin: 60px 0 20px">
+                <h2 class="main">Requirements</h2>
+              </div>
+              <ul class="perks" data-render="requirements" style="grid-template-columns: 1fr"></ul>
+            </div>
+            <div>
+              <div class="contact-card anim-up">
+                <h3>Send request</h3>
+                <form class="form" data-demo novalidate>
+                  <div class="field"><label for="j-name">Full Name</label><input id="j-name" name="name" required autocomplete="name" /></div>
+                  <div class="field"><label for="j-email">Your E-Mail</label><input id="j-email" name="email" type="email" required autocomplete="email" /></div>
+                  <div class="field"><label for="j-phone">Phone</label><input id="j-phone" name="phone" type="tel" required autocomplete="tel" /></div>
+                  <div class="field"><label for="j-exp">Tell us about your experience</label><textarea id="j-exp" name="experience"></textarea></div>
+                  <div class="hint">By sending, you agree to our <a href="#">Terms of Service</a> &amp; <a href="#">Privacy Policy</a>.</div>
+                  <div><button class="btn block" type="submit"><span>Send request</span></button></div>
+                </form>
+                <div class="form-success">
+                  <h3>Thank you!</h3>
+                  <p>We received your application and will be in touch within three business days.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/pages/inner.js"></script>
+  </body>
+</html>

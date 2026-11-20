@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Team — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="The HOLYDJO-CLEAN team. Vetted before they ring." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="team">
+    <main>
+      <section class="page-hero">
+        <div class="circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+        <div class="wrap">
+          <div class="subttl">The people you let in</div>
+          <h1>Vetted before they ring.</h1>
+          <p class="lead">We interview every cleaner in person, run a background check and train them ourselves. Here are some of the people who may ring your bell.</p>
+        </div>
+        <div class="page-illus"></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="team" data-render="team"></div>
+        </div>
+      </section>
+
+      <section class="section section-booking booking-center">
+        <div class="col-12 blue">
+          <span class="blob a"></span><span class="blob b"></span>
+          <div class="info anim-block">
+            <h3 class="big">Our promise</h3>
+            <p>Not happy with something? Tell us within 24 hours and we come back, free of charge.</p>
+            <a href="booking.html" class="btn white"><span>Book your cleaning</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/pages/inner.js"></script>
+  </body>
+</html>

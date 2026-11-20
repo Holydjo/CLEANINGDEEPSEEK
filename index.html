@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HOLYDJO-CLEAN — Home Cleaning in Canada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Home cleaning for busy Canadians. Book in two minutes and get your evenings back." />
+    <meta name="theme-color" content="#0877c8" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="index">
+    <main id="main_page">
+      <!-- Hero -->
+      <section class="section section-hero">
+        <svg id="back" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 9" preserveAspectRatio="none">
+          <path fill="#fff" d="M0,9V9s0,0,8,0,8,0,8,0V9H0Z" />
+        </svg>
+        <div class="circles">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="wrap hero-wrap">
+          <div class="col-6">
+            <div id="booking-engine">
+              <h1 class="clipped"><span>Come home to clean.</span></h1>
+              <p>
+                Your week is full already.<br />
+                Hand us the mop and spend the time on something you actually enjoy.
+              </p>
+              <div class="booking-bar">
+                <div class="reveal"></div>
+                <a href="booking.html" class="btn no-anim"><span>Book from $99.99</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 hero-hello"></div>
+        </div>
+        <div class="wrap scrollmore">
+          <button class="scrollmore_trigger" type="button"><span class="mouse"></span><span>Who we are</span></button>
+          <div class="hero-badges">
+            <span><b>4.9</b> average rating</span>
+            <span><b>12,000+</b> homes cleaned</span>
+            <span><b>6</b> Canadian cities</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet -->
+      <section class="section section-half-color" id="meet">
+        <div class="wrap">
+          <div class="col-6 text-block anim-block">
+            <div class="subttl">Who we are</div>
+            <h2 class="main">The clean you keep putting off.</h2>
+            <p>Work, friends, the gym, the commute. Somewhere in there the floors still need doing, and it is rarely the thing you want to do with a free evening.</p>
+            <p>We take that job off your list. You walk in after a long day to a home that smells fresh and looks cared for, without lifting a finger.</p>
+            <a href="about.html" class="btn"><span>Our story</span></a>
+          </div>
+          <div class="col-6 color-block">
+            <div class="illus" data-illus="home"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section section-photo">
+        <div class="circles">
+          <div class="circle" style="background: var(--pink); width: 25vw; height: 25vw; left: -4vw; top: -4vw"></div>
+          <div class="circle" style="right: -6vw; bottom: -4vw"></div>
+        </div>
+        <div class="wrap">
+          <div class="col-6 photo-block">
+            <div class="photo-container showright" data-illus="services"></div>
+          </div>
+          <div class="col-6 text-block anim-block">
+            <div class="subttl">What we clean</div>
+            <h2 class="main">Every corner, every visit.</h2>
+            <p>Bathrooms, ovens, the shelf nobody has looked at since you moved in. None of it scares us.</p>
+            <p>Pick one of four levels of clean, add extras where you need them, and we work through the same checklist on every visit, top shelf to floorboards.</p>
+            <a href="services.html" class="btn"><span>See what we clean</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cleaners -->
+      <section class="section section-image">
+        <div class="circles">
+          <div class="circle" style="left: -8vw; top: auto; bottom: -10vw; width: 22vw; height: 22vw"></div>
+          <div class="circle" style="left: auto; right: 10vw; top: 2vw; width: 7vw; height: 7vw; background: var(--bg-3)"></div>
+        </div>
+        <div class="wrap">
+          <div class="col-6 text-block anim-block">
+            <div class="subttl">The people you let in</div>
+            <h2 class="main">Vetted before they ring.</h2>
+            <p>Letting someone into your home takes trust. We earn it before the first visit, not after.</p>
+            <p>Every cleaner is interviewed in person, background checked and trained by us. You can read their ratings and reviews before they ever ring your bell.</p>
+            <a href="team.html" class="btn"><span>Meet the team</span></a>
+          </div>
+          <div class="col-6 image-block">
+            <div class="image-container showleft" data-illus="cleaners"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section section-icons">
+        <div class="wrap">
+          <h2 class="main anim-up">Why it works</h2>
+          <div class="features"></div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section section-reviews" id="reviews">
+        <div class="wrap head anim-block">
+          <h2 class="main">From our clients</h2>
+          <div class="get-some-love">
+            <div class="service yelp">
+              <div class="logo">Quality</div>
+              <div class="some_rating"><div class="back"></div><div class="front" data-rate="4.8"></div></div>
+            </div>
+            <div class="service grev">
+              <div class="logo">On time</div>
+              <div class="some_rating"><div class="back"></div><div class="front" data-rate="4.9"></div></div>
+            </div>
+            <a href="#" class="btn ghost small"><span>Leave a review</span></a>
+          </div>
+        </div>
+        <div class="slider">
+          <div class="slider-wrap grabble"></div>
+        </div>
+        <div class="wrap">
+          <div class="slider-nav">
+            <button class="prev" aria-label="Previous reviews"><svg viewBox="0 0 16 16"><path d="M10 3L5 8l5 5" /></svg></button>
+            <button class="next" aria-label="Next reviews"><svg viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" /></svg></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-booking booking-center">
+        <div class="col-12 blue">
+          <span class="blob a"></span>
+          <span class="blob b"></span>
+          <div class="info anim-block">
+            <h3 class="big">Save 20% on repeat visits</h3>
+            <p>Set up a repeat visit and the saving applies to every clean.</p>
+            <a href="booking.html" class="btn white"><span>Book a visit</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/pages/home.js"></script>
+  </body>
+</html>

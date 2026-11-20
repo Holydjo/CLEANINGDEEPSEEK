@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign in — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Login to your HOLYDJO-CLEAN account." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="signin">
+    <main class="auth">
+      <div class="side">
+        <div class="page-illus mascot-slot"></div>
+        <div>
+          <h2>Come home to clean.</h2>
+          <p>Manage bookings, reschedule in seconds and unlock up to 20% off recurring cleanings from your account.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="inner">
+          <h1 data-title>Sign In</h1>
+          <p class="muted" data-sub>Welcome back, please login to your account.</p>
+          <div class="tabs" role="tablist">
+            <button type="button" role="tab" class="active" data-tab="in">Sign In</button>
+            <button type="button" role="tab" data-tab="up">Sign Up</button>
+          </div>
+          <form class="form" id="auth" novalidate>
+            <div class="field" data-only="up" hidden><label for="a-name">Full Name</label><input id="a-name" name="name" autocomplete="name" /></div>
+            <div class="field"><label for="a-email">Your e-mail</label><input id="a-email" name="email" type="email" required autocomplete="email" /></div>
+            <div class="field"><label for="a-pass">Password</label><input id="a-pass" name="password" type="password" required minlength="8" autocomplete="current-password" /></div>
+            <div class="hint" data-only="in"><a href="#" data-forgot>Forgot password?</a></div>
+            <div class="hint" data-only="up" hidden>By signing up, you agree to HOLYDJO-CLEAN <a href="#">Terms of Service</a> &amp; <a href="#">Privacy Policy</a>.</div>
+            <button class="btn block" type="submit"><span data-submit>Sign In</span></button>
+          </form>
+          <div class="form-success">
+            <h3>This is a demo</h3>
+            <p>Accounts are not connected yet, so nothing was sent or stored.</p>
+            <a href="index.html" class="btn small"><span>Go to main page</span></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/pages/signin.js"></script>
+  </body>
+</html>

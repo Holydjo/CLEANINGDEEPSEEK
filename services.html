@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Services — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Home cleaning services and add-ons. Essential, Deep Clean, The Reset and Empty Home." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="services">
+    <main>
+      <section class="page-hero">
+        <div class="circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+        <div class="wrap">
+          <div class="subttl">What we clean</div>
+          <h1>Every corner, every visit.</h1>
+          <p class="lead">Four levels of clean, one checklist we never skip. Prices shown are for a studio with one bathroom; the booking page adjusts them for your home.</p>
+        </div>
+        <div class="page-illus"></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="cards four" data-render="types"></div>
+        </div>
+      </section>
+
+      <section class="section" style="background: var(--bg)">
+        <div class="wrap">
+          <div class="anim-block" style="margin-bottom: 50px">
+            <div class="subttl">Basic services</div>
+            <h2 class="main">What every visit includes</h2>
+          </div>
+          <div class="checklist-cols" data-render="checklist"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="anim-block" style="margin-bottom: 40px">
+            <div class="subttl">Add-ons</div>
+            <h2 class="main">Add the extras</h2>
+            <p style="max-width: 52ch">Add any of these to an Essential or Deep Clean visit. They are already included in The Reset and Empty Home.</p>
+          </div>
+          <div class="addons" data-render="addons"></div>
+          <div class="note anim-up" data-render="notes" style="margin-top: 40px"></div>
+        </div>
+      </section>
+
+      <section class="section section-booking booking-center">
+        <div class="col-12 blue">
+          <span class="blob a"></span><span class="blob b"></span>
+          <div class="info anim-block">
+            <h3 class="big">Ready when you are?</h3>
+            <p>Build your clean.</p>
+            <a href="booking.html" class="btn white"><span>Book a visit</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/pages/inner.js"></script>
+  </body>
+</html>

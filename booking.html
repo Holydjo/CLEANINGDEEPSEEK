@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book your cleaning — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="Book your home cleaning in Canada. Prices in Canadian dollars with GST, HST or QST shown before you confirm." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="booking">
+    <main class="booking-page">
+      <div class="wrap">
+        <div class="anim-block" style="margin-bottom: 36px">
+          <div class="subttl">Book a visit</div>
+          <h1 style="font-size: clamp(32px, 3.4vw, 48px); margin: 0">Build your clean.</h1>
+        </div>
+
+        <div class="booking-layout">
+          <div class="booking-steps">
+            <div class="steps-nav" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+            <!-- Step 1 -->
+            <div class="step" data-step="0">
+              <h2>Your home</h2>
+              <p class="sub">Tell us the size and the kind of clean you need.</p>
+              <div class="label">Number of bedrooms</div>
+              <div class="chips" data-chips="bedroomId"></div>
+              <div class="label">Number of bathrooms</div>
+              <div class="chips" data-chips="bathroomId"></div>
+              <div class="label">Type of cleaning</div>
+              <div class="choice-grid" data-choices="typeId"></div>
+              <div class="label">Add-ons</div>
+              <div class="chips" data-addons></div>
+              <p class="sub addons-note" hidden>Add-ons are already included in this type of cleaning.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step" data-step="1">
+              <h2>Date and time</h2>
+              <p class="sub">Drag to view the available times.</p>
+              <div class="label">Date</div>
+              <div class="dates" data-dates></div>
+              <div class="label">Time</div>
+              <div class="times" data-times></div>
+              <div class="label">How often?</div>
+              <div class="chips" data-chips="frequencyId"></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step" data-step="2">
+              <h2>Address and access</h2>
+              <p class="sub">Where are we going, and how will we get in?</p>
+              <form class="form" id="details" novalidate>
+                <div class="two">
+                  <div class="field"><label for="b-first">First Name</label><input id="b-first" name="first" required autocomplete="given-name" /></div>
+                  <div class="field"><label for="b-last">Last Name</label><input id="b-last" name="last" required autocomplete="family-name" /></div>
+                </div>
+                <div class="two">
+                  <div class="field"><label for="b-email">Your e-mail</label><input id="b-email" name="email" type="email" required autocomplete="email" /></div>
+                  <div class="field"><label for="b-phone">Phone number</label><input id="b-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(416) 555-0142" /></div>
+                </div>
+                <div class="two">
+                  <div class="field"><label for="b-address">Address</label><input id="b-address" name="address" required autocomplete="street-address" /></div>
+                  <div class="field"><label for="b-apt">Unit / Apt.</label><input id="b-apt" name="apt" autocomplete="address-line2" /></div>
+                </div>
+                <div class="two">
+                  <div class="field"><label for="b-city">City</label><input id="b-city" name="city" required autocomplete="address-level2" /></div>
+                  <div class="field"><label for="b-province">Province / Territory</label><select id="b-province" name="province" required autocomplete="address-level1"></select></div>
+                </div>
+                <div class="two">
+                  <div class="field"><label for="b-postal">Postal Code</label><input id="b-postal" name="postal" required autocomplete="postal-code" placeholder="A1A 1A1" maxlength="7" autocapitalize="characters" /></div>
+                  <div class="field"><label for="b-country">Country</label><input id="b-country" name="country" value="Canada" readonly autocomplete="country-name" /></div>
+                </div>
+                <div class="label" style="margin: 8px 0 0">How will we get in?</div>
+                <div class="chips" data-chips="access" style="margin-bottom: 0"></div>
+                <div class="label" style="margin: 8px 0 0">Any pets?</div>
+                <div class="chips" data-chips="pets" style="margin-bottom: 0"></div>
+                <div class="field"><label for="b-notes">Additional Information</label><textarea id="b-notes" name="notes" placeholder="Entry codes, allergies, rooms to skip…"></textarea></div>
+              </form>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step" data-step="3">
+              <h2>Review</h2>
+              <p class="sub">Check the details. This is a demo booking, so no payment is taken.</p>
+              <div class="contact-card" data-review></div>
+            </div>
+
+            <!-- Done -->
+            <div class="step" data-step="4">
+              <div class="booking-done">
+                <div class="check"><svg viewBox="0 0 34 34"><path d="M8 18l6 6 12-14" /></svg></div>
+                <h2>Fine! We are ready!</h2>
+                <p class="sub" data-done-text></p>
+                <a href="index.html" class="btn"><span>Go to main page</span></a>
+              </div>
+            </div>
+
+            <div class="step-actions">
+              <button class="btn ghost" type="button" data-back><span>Back</span></button>
+              <button class="btn" type="button" data-next><span>Next</span></button>
+            </div>
+          </div>
+
+          <aside class="summary" aria-live="polite">
+            <h3>Order info</h3>
+            <div data-summary></div>
+            <div class="promo">
+              <input type="text" placeholder="Promo code" aria-label="Promo code" data-promo />
+              <button class="btn black small" type="button" data-promo-apply><span>Apply</span></button>
+            </div>
+            <div class="safe">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="2" y="6" width="10" height="7" rx="2" /><path d="M4.5 6V4a2.5 2.5 0 015 0v2" /></svg>
+              Your information is safe
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/pages/booking.js"></script>
+  </body>
+</html>

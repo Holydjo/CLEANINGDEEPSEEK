@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About us — HOLYDJO-CLEAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <script>
+      /* Hide the page for an instant when it will be shown in French, so the English text never flashes. */
+      try {
+        var l = new URLSearchParams(location.search).get('lang') || localStorage.getItem('holydjo-lang') || navigator.language;
+        if (/^fr/i.test(l)) {
+          document.documentElement.lang = 'fr-CA';
+          document.documentElement.classList.add('i18n-pending');
+          setTimeout(function () {
+            document.documentElement.classList.remove('i18n-pending');
+          }, 3000);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      html.i18n-pending body {
+        visibility: hidden;
+      }
+    </style>
+    <meta name="description" content="About HOLYDJO-CLEAN and our mission. Local hands. High standards." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="about">
+    <main>
+      <section class="page-hero">
+        <div class="circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+        <div class="wrap">
+          <div class="subttl">About us</div>
+          <h1>Local hands.<br />High standards.</h1>
+          <p class="lead">HOLYDJO-CLEAN started with a simple question: why is it so hard to find a cleaner you can trust twice? We built the company around the answer.</p>
+        </div>
+        <div class="page-illus"></div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="stats">
+            <div class="stat anim-up"><b>12k+</b><span>homes cleaned since 2018</span></div>
+            <div class="stat anim-up"><b>4.9</b><span>average client rating</span></div>
+            <div class="stat anim-up"><b>6</b><span>Canadian cities served</span></div>
+            <div class="stat anim-up"><b>100%</b><span>cleaners police record checked</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="values-list">
+            <div class="anim-block">
+              <div class="num">01</div>
+              <h3>Local hands</h3>
+              <p>Every cleaner lives in the city they clean. They know what a front hall looks like after a February thaw, road salt and all, and they know what a clean one feels like too.</p>
+            </div>
+            <div class="anim-block">
+              <div class="num">02</div>
+              <h3>High standards</h3>
+              <p>One checklist, every visit. If anything is not right, tell us within 24 hours and we come back at no cost. That is our promise to you.</p>
+            </div>
+            <div class="anim-block">
+              <div class="num">03</div>
+              <h3>We hire right</h3>
+              <p>Each cleaner passes a police record check, an in-person interview and paid training before their first booking. We employ our team; we do not outsource it.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-half-color" style="min-height: 0">
+        <div class="wrap">
+          <div class="col-6 text-block anim-block">
+            <div class="subttl">Why we started</div>
+            <h2 class="main">Give Canadians their evenings back</h2>
+            <p>Summer is short. Nobody wants to spend a sunny Saturday scrubbing a tub. Our job is to hand those hours back to you.</p>
+            <p>We measure ourselves by one thing: how it feels to open your front door after we leave.</p>
+            <a href="careers.html" class="btn"><span>Join the team</span></a>
+          </div>
+          <div class="col-6 color-block"><div class="illus" data-illus="home"></div></div>
+        </div>
+      </section>
+
+      <section class="section section-booking booking-center">
+        <div class="col-12 blue">
+          <span class="blob a"></span><span class="blob b"></span>
+          <div class="info anim-block">
+            <h3 class="big">Ready when you are</h3>
+            <p>Build your clean.</p>
+            <a href="booking.html" class="btn white"><span>Book a visit</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/pages/inner.js"></script>
+  </body>
+</html>
