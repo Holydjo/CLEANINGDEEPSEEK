@@ -1,6 +1,6 @@
 /* ------------------------------------------------------------------
    HOLYDJO-CLEAN — design system
-   Sky blue #0877c8 on an airy blue-white #f4f8fd, with a sunny accent.
+   Blue #0877c8 and black #000 on an airy blue-white canvas.
    Soft organic blobs, geometric headings, pill controls.
 ------------------------------------------------------------------- */
 
@@ -8,12 +8,12 @@
   --blue: #0877c8;
   --blue-dark: #075a9c;
   --blue-light: #8fcdf5;
-  --bg: #f3f7fc;
-  --bg-2: #f8fbff;
-  --bg-3: #e8f2fb;
-  --rose: #fdf3e3;
-  --pink: #ffe2ad;
-  --sun: #ffd36b;
+  --bg: #f3f6fa;
+  --bg-2: #fafcfd;
+  --bg-3: #e5edf6;
+  --rose: #e9eff6;
+  --pink: #dbe8f4;
+  --sun: #0877c8;
   --ink: #000;
   --ink-2: #393939;
   --muted: #6b7f93;
@@ -1171,6 +1171,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0.8) contrast(1.04) brightness(1.01);
 }
 
 .section-half-color .color-block .illus .photo-img {
@@ -1197,7 +1198,7 @@ p {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(155deg, rgba(8, 119, 200, 0.08), rgba(255, 226, 173, 0.1));
+  background: linear-gradient(155deg, rgba(8, 119, 200, 0.12), rgba(0, 0, 0, 0.08));
   mix-blend-mode: soft-light;
   pointer-events: none;
 }
@@ -1428,7 +1429,7 @@ p {
 }
 
 .section-booking .blue {
-  background: var(--blue);
+  background: var(--ink);
   color: var(--white);
   min-height: 420px;
   display: flex;

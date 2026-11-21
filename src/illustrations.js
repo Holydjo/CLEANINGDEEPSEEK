@@ -3,11 +3,11 @@
   Every picture on the site is drawn here from scratch for the brand:
   a sky-blue water-drop mascot with a mop, three scenes, feature icons,
   team portraits, the logo mark and the loader mark.
-  Palette: sky blue #0877c8 / #4db8f5 / #a9e2ff, white, and a sunny accent #ffd36b.
+  Palette: blue #0877c8 / #4db8f5 / #a9e2ff, black #000 and white.
 */
 
 /* Logo mark: a water drop with a shine. Coloured by CSS through currentColor. */
-export const logoMark = `<svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5c-2.6 5.6-9.5 10.4-9.5 17a9.5 9.5 0 0019 0c0-6.600-6.900-11.400-9.500-17z" fill="currentColor"/><path d="M11.200 20.500c0-2.400 1.300-4.300 3.100-5.600" fill="none" stroke="#fff" stroke-width="2.200" stroke-linecap="round" opacity=".9"/><path d="M24.500 3l.9 2.300 2.300.9-2.300.9-.9 2.300-.9-2.300-2.300-.9 2.300-.9z" fill="#ffd36b"/></svg>`;
+export const logoMark = `<svg class="mark" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M16 2.5c-2.6 5.6-9.5 10.4-9.5 17a9.5 9.5 0 0019 0c0-6.600-6.900-11.400-9.500-17z" fill="currentColor"/><path d="M11.200 20.500c0-2.400 1.300-4.300 3.100-5.600" fill="none" stroke="#fff" stroke-width="2.200" stroke-linecap="round" opacity=".9"/><path d="M24.500 3l.9 2.300 2.300.9-2.300.9-.9 2.300-.9-2.300-2.300-.9 2.300-.9z" fill="#fff"/></svg>`;
 
 /* Mascot: "Djo", a water drop in a white apron holding a mop. */
 export const mascot = `
@@ -19,9 +19,9 @@ export const mascot = `
       <stop offset="1" stop-color="#1c95e3"/>
     </linearGradient>
     <linearGradient id="m-pole" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#f0b03a"/>
-      <stop offset=".5" stop-color="#ffe7ad"/>
-      <stop offset="1" stop-color="#e59f24"/>
+      <stop stop-color="#2b2b2b"/>
+      <stop offset=".5" stop-color="#9aa4ad"/>
+      <stop offset="1" stop-color="#0b0b0b"/>
     </linearGradient>
     <linearGradient id="m-apron" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#ffffff"/>
@@ -110,7 +110,7 @@ export const mascot = `
   </g>
 
   <!-- sparkles -->
-  <g class="m-spark" fill="#ffd36b">
+  <g class="m-spark" fill="#0877c8">
     <path d="M500 462l6 16 16 6-16 6-6 16-6-16-16-6 16-6z"/>
     <path d="M196 96l5 13 13 5-13 5-5 13-5-13-13-5 13-5z"/>
     <path d="M40 330l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/>
@@ -182,7 +182,7 @@ export function portrait(seed, tone = '#0877c8') {
   const hairs = ['#2a2017', '#5a3b22', '#0b2b4a', '#c9813a', '#151515', '#8c4a2f'];
   const skin = skins[seed % skins.length];
   const hair = hairs[(seed * 3) % hairs.length];
-  const bg = seed % 2 ? '#eaf5fd' : '#fdf3e3';
+  const bg = seed % 2 ? '#eaf2fa' : '#eef1f5';
   const long = seed % 3 === 0;
   const cap = seed % 4 === 1;
   return `
@@ -234,5 +234,5 @@ export const loaderMark = `
   <ellipse cx="62" cy="174" rx="10" ry="6" fill="#ff9d7a" opacity=".6"/>
   <ellipse cx="142" cy="174" rx="10" ry="6" fill="#ff9d7a" opacity=".6"/>
   <path d="M88 176q14 18 28 0z" fill="#0b2b4a"/>
-  <path d="M164 40l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#ffd36b"/>
+  <path d="M164 40l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#8fcdf5"/>
 </svg>`;

@@ -6,7 +6,7 @@
   Mention, 1 May 2019.
 - **Target repository:** <https://github.com/Holydjo/CLEANINGDEEPSEEK>
 - **Remake:** HOLYDJO-CLEAN, a home cleaning company in Canada.
-- **Completed:** 19 November 2026.
+- **Completed:** 20 November 2026.
 
 The reference is used as a design study only. No Oboosho photograph, illustration, person,
 logo, or copy is used on the site. The only places the name Oboosho appears are this report,
@@ -46,10 +46,12 @@ navigation and the section names in the bundle.
 
 ### Brand and palette
 
-The brief's colour field was blank. The remake uses the palette already established for
-HOLYDJO-CLEAN in its repository: sky blue `#0877c8`, deep blue `#075a9c`, pale blue `#8fcdf5`,
-warm sun `#ffd36b`, and an airy blue-white canvas `#f3f7fc`. The reference's indigo, lavender
-and rose are not used as brand colours.
+The brief specifies blue and black. No hex values were supplied, so the remake uses the
+established HOLYDJO-CLEAN blue `#0877c8`, deep blue `#075a9c`, pale blue `#8fcdf5` and black
+`#000000` on an airy blue-white canvas `#f3f6fa`. The first draft's sunny third accent has been
+removed; the photographic grade is cool daylight, and black carries the booking bar, login pill
+and the closing CTA band. The reference's indigo, lavender and rose are not used as brand
+colours.
 
 ### Copy
 
@@ -80,7 +82,7 @@ the repository and no hotlink to Oboosho or Awwwards.
 | Slot | Reference picture | New picture | Shape, light and colour |
 | --- | --- | --- | --- |
 | Hero, right | Glossy 3D purple dinosaur with a vacuum, bottom-anchored, soft studio shadow | “Djo”, an original water-drop mascot in an apron with a mop, bottom-anchored, soft blue shadow | Same tall right-hand placement and bottom crop; same soft studio falloff; brand blue instead of purple |
-| Meet, right | `clean.jpg`, a cleaning scene in the colour block | New sunlit living room, linen sofa and plant, 5:4 card | Same right-hand colour-block slot; warm window light with cool shadows |
+| Meet, right | `clean.jpg`, a cleaning scene in the colour block | New sunlit living room, linen sofa and plant, 5:4 card | Same right-hand colour-block slot; soft window light with a cool grade |
 | Services, left | Cleaning still life in a tall frame | New close-up of a gloved hand polishing a table with a blue cloth, 4:5 | Same tall portrait slot; soft daylight, blue accent |
 | Cleaners, right | `hand.png`, a cut-out cleaning hand | New pair of cleaners in blue uniforms, seen from behind, in a circle | Same circular right-hand slot; natural light, anonymous faces |
 | Features | Four outlined icons | Four new two-tone icons (booking, shield, key, price tag) | Same grid, same optical weight |
@@ -94,7 +96,7 @@ the repository and no hotlink to Oboosho or Awwwards.
 
 The picture set is documented in [docs/PICTURES.md](./docs/PICTURES.md). The scene photographs
 were generated for this project with an open text-to-image model, then cropped to the slot and
-colour-graded. The brief supplied no photo folder and none was present in the workspace, so the
+colour-graded for the blue and black brand. The brief supplied no photo folder and none was present in the workspace, so the
 photographs are stand-ins for the client's own team and client photography. They can be replaced
 file-for-file in `public/photos/` without layout changes. The mascot, logo, icons and team
 avatars are original vector drawings; the avatars are illustrations, not photographs of real

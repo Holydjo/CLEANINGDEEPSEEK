@@ -4,7 +4,7 @@ Every picture on this site was made for HOLYDJO-CLEAN. No Oboosho photograph, il
 person, logo or text is used.
 
 The scene photographs are new, art-directed images generated for this remake with an open
-text-to-image model, then cropped and colour-graded for the slot. The brief supplied no photo
+text-to-image model, then cropped and colour-graded for the slot and the blue and black brand. The brief supplied no photo
 folder, so these are stand-ins for the real team and client photography. Replace a file with a
 real photograph at the same path and aspect ratio and the layout will hold.
 

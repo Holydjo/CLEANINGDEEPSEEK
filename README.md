@@ -43,7 +43,7 @@ Lenis for smooth scrolling. No framework and no backend.
 
 - **Name and logo.** The name and the logo wordmark are set in `brand` in `src/data.js`. The
   water-drop logo mark is `logoMark` in `src/illustrations.js`.
-- **Colours.** Sky blue and white with a sunny accent. The tokens are at the top of
+- **Colours.** Blue and black on white and cool grey. The tokens are at the top of
   `src/styles/main.css`.
 - **Typefaces.** Manrope and Inter, loaded from Google Fonts.
 
@@ -51,9 +51,10 @@ Lenis for smooth scrolling. No framework and no backend.
 | --- | --- | --- |
 | `--blue` | `#0877c8` | Buttons, links, logo |
 | `--blue-dark` | `#075a9c` | Hover and deep accents |
-| `--blue-light` | `#8fcdf5` | Outlines and soft accents |
-| `--bg` | `#f3f7fc` | Page tint |
-| `--pink` | `#ffe2ad` | Sunny accent blob |
+| `--blue-light` | `#8fcdf5` | Outlines, icons and soft accents |
+| `--ink` | `#000000` | Type, booking bar, login pill, CTA band |
+| `--bg` | `#f3f6fa` | Page tint |
+| `--rose` | `#e9eff6` | Cool note and blob tint |
 
 ## Pictures
 
